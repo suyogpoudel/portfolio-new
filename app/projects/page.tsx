@@ -56,19 +56,21 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col justify-center items-center py-10">
-      <h1 className="font-display text-4xl mb-10">My Projects</h1>
+      <h1 className="font-display max-sm:text-3xl text-4xl mb-10">
+        My Projects
+      </h1>
 
       <div className="flex flex-col gap-10 justify-center items-center">
         <div className="flex flex-col gap-2 w-[80%] items-center justify-center">
-          <h3 className="font-headings text-3xl text-zinc-100 px-2">
+          <h3 className="font-headings text-2xl lg:text-3xl text-zinc-100 px-2">
             Personal Projects
           </h3>
-          <p className="text-lg text-justify text-zinc-300">
+          <p className="sm:text-lg text-justify text-zinc-300">
             These are the projects I made for myself mainly for the purpose of
             learning.
           </p>
 
-          <div className="grid grid-cols-2 gap-8 mt-4 mb-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {personalProjects.map(({ title, desc, link }) => (
               <motion.div
                 key={title}
@@ -100,15 +102,15 @@ const Projects = () => {
         </div>
 
         <div className="flex flex-col gap-2 w-[80%] items-center justify-center">
-          <h3 className="font-headings text-3xl text-zinc-100 px-2">
+          <h3 className="font-headings text-2xl lg:text-3xl text-zinc-100 px-2">
             Projects for Clients
           </h3>
-          <p className="text-lg text-justify text-zinc-300">
+          <p className="sm:text-lg text-justify text-zinc-300">
             These are the projects I made for myself mainly for the purpose of
             learning.
           </p>
 
-          <div className="grid grid-cols-2 gap-8 mt-4 mb-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {projectsForClients.map(({ title, desc, link }) => (
               <motion.div
                 key={title}

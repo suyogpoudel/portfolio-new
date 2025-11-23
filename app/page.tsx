@@ -16,7 +16,7 @@ const Home = () => {
         <p className="px-4 text-zinc-300">Hi, I am</p>
 
         <motion.h1
-          className="font-display font-semibold text-6xl"
+          className="font-display font-semibold lg:text-6xl text-5xl"
           initial={{
             color: "#4dabf7",
           }}

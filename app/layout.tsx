@@ -47,7 +47,7 @@ export default function RootLayout({
           <Navbar />
         </nav>
 
-        <main className="flex-1 flex justify-center items-center py-15">
+        <main className="flex-1 flex justify-center items-center py-15 px-10">
           {children}
         </main>
 

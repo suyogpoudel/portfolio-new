@@ -93,8 +93,10 @@ const About = () => {
         </div>
 
         <div className="flex flex-col justify-start w-[80%] mt-10">
-          <h3 className="font-headings text-2xl text-zinc-100 px-2">Profile</h3>
-          <p className="text-lg text-justify">
+          <h3 className="font-headings text-xl lg:text-2xl text-zinc-100 px-2">
+            Profile
+          </h3>
+          <p className="sm:text-lg text-justify">
             I am an 18yo student from Nepal who's just learning web development
             because that's what I enjoy doing a lot. I have always been
             fascinated by coding and computers, so web development is kinda
@@ -105,13 +107,15 @@ const About = () => {
         </div>
 
         <div className="flex flex-col justify-start w-[80%] mt-10">
-          <h3 className="font-headings text-2xl text-zinc-100 px-2">Skills</h3>
-          <p className="text-lg text-justify mb-5">
+          <h3 className="font-headings text-xl lg:text-2xl text-zinc-100 px-2">
+            Skills
+          </h3>
+          <p className="sm:text-lg text-justify mb-5">
             I enjoy learning new languages and technologies and here are the
             things I know right now
           </p>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {skills.map(({ title, desc, icon: Icon }) => (
               <motion.div
                 key={title}
