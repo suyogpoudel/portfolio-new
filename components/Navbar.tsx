@@ -25,17 +25,20 @@ const Navbar = () => {
 
   return (
     <div className="w-[85%] max-sm:w-[95%] mx-auto bg-zinc-900 px-8 py-4 flex justify-between items-center rounded-b-4xl shadow-lg">
-      <Link href="/" className="font-display text-xl">
+      <Link
+        href="/"
+        className="font-display text-xl hover:text-teal-400 transition-colors duration-200"
+      >
         Suyog.
       </Link>
 
-      <ul className="flex justify-center items-center gap-14 max-sm:hidden">
+      <ul className="flex justify-center items-center gap-14 max-md:gap-5 max-sm:hidden">
         {links.map(({ href, title }) => (
           <li key={title}>
             <Link
               href={href}
-              className={`hover:bg-zinc-800 px-4 py-2 rounded-lg transition-colors duration-500 active:bg-zinc-700 ${
-                isActive(href) ? "bg-zinc-800" : ""
+              className={`hover:text-teal-400 px-2 py-1 transition-colors duration-300 ${
+                isActive(href) ? "border-b-2 border-teal-500" : ""
               }`}
             >
               {title}
@@ -51,21 +54,13 @@ const Navbar = () => {
         Hire Me!
       </Link>
 
-      {isOpen ? (
-        <button
-          className="hover:text-zinc-400 cursor-pointer transition-colors duration-300 z-100 sm:hidden"
-          onClick={() => setIsOpen(false)}
-        >
-          <IconX />
-        </button>
-      ) : (
-        <button
-          className="hover:text-zinc-400 cursor-pointer transition-colors duration-300 z-100 sm:hidden"
-          onClick={() => setIsOpen(true)}
-        >
-          <IconAlignRight />
-        </button>
-      )}
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        className="hover:text-zinc-400 cursor-pointer transition-colors duration-300 z-100 sm:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <IconX /> : <IconAlignRight />}
+      </motion.button>
 
       {isOpen && (
         <motion.div

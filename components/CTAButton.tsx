@@ -9,9 +9,15 @@ const CTAButton = () => {
           backgroundColor: "#4dabf7",
         }}
         animate={{
-          backgroundColor: ["#4dabf7", "#3bc9db", "#38d9a9", "#3bc9db"],
+          backgroundColor: [
+            "#4dabf7",
+            "#3bc9db",
+            "#38d9a9",
+            "#3bc9db",
+            "#4dabf7",
+          ],
           transition: {
-            duration: 5,
+            duration: 7,
             repeat: Infinity,
           },
         }}

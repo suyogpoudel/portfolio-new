@@ -4,7 +4,15 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Projects | Suyog Poudel",
-  description: "ill write smth here",
+  description:
+    "From quirky APIs to full-stack apps, here are my personal and client projects. Built with HTML, CSS, JS, React, and Next.js.",
+  twitter: {
+    card: "summary",
+    title: "Projects by Suyog Poudel",
+    description:
+      "Personal and client web projects showcasing skills in modern web development.",
+    creator: "@__suyogpoudel",
+  },
 };
 
 const Projects = () => {
@@ -50,7 +58,7 @@ const Projects = () => {
     {
       title: "Triple K Sports",
       desc: "My first project for a client which I made using React. This is a sports management organization based in Nepal.",
-      link: "/",
+      link: "https://www.tripleksports.com/",
     },
   ];
 

@@ -19,24 +19,28 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | Suyog Poudel",
-  description: "ill write smth here",
+  description:
+    "18-year-old web dev from Nepal who loves coding, designing, and learning new tech. Here’s a peek into my skills and journey.",
+  twitter: {
+    card: "summary",
+    title: "About Suyog Poudel",
+    description: "Profile and skills of a full-stack web developer from Nepal.",
+    creator: "@__suyogpoudel",
+  },
 };
 
 const About = () => {
   const links = [
-    { src: "/", title: "Linkedin", icon: IconBrandLinkedin },
+    {
+      src: "https://www.linkedin.com/in/poudelsuyog/",
+      title: "Linkedin",
+      icon: IconBrandLinkedin,
+    },
     {
       src: "https://github.com/suyogpoudel",
       title: "Github",
       icon: IconBrandGithub,
     },
-    {
-      src: "https://www.facebook.com/suyogpoudel01",
-      title: "Facebook",
-      icon: IconBrandFacebook,
-    },
-    { src: "/", title: "Instagram", icon: IconBrandInstagram },
-    { src: "/", title: "X", icon: IconBrandX },
   ];
 
   const skills = [
@@ -86,7 +90,11 @@ const About = () => {
         <h1 className="text-4xl font-display mb-3">Suyog Poudel</h1>
         <div className="flex justify-center items-center gap-4">
           {links.map(({ src, title, icon: Icon }) => (
-            <Link href={src} key={title} target="_blank">
+            <Link
+              href={src}
+              key={title}
+              target="_blank"
+            >
               <Icon className="w-7 h-7 text-zinc-300 hover:text-teal-500 transition-colors duration-200" />
             </Link>
           ))}
