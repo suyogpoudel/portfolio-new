@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import * as motion from "motion/react-client";
 import Link from "next/link";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export const metadata: Metadata = {
   title: "Projects | Suyog Poudel",
@@ -63,72 +64,60 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center py-10">
+    <div className="flex flex-col justify-center items-center py-10 sm:py-15 lg:py-20">
       <h1 className="font-display max-sm:text-3xl text-4xl mb-10">
         My Projects
       </h1>
 
       <div className="flex flex-col gap-10 justify-center items-center">
-        <div className="flex flex-col gap-2 w-[80%] items-center justify-center">
+        <div className="flex flex-col gap-2 w-[80%] max-sm:w-[90%] items-center justify-center">
           <h3 className="font-headings text-2xl lg:text-3xl text-zinc-100 px-2">
             Personal Projects
           </h3>
           <p className="sm:text-lg text-justify text-zinc-300">
             These are the projects I made for myself mainly for the purpose of
-            learning.
+            learning. (Click to visit)
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {personalProjects.map(({ title, desc, link }) => (
-              <div
+              <Link
+                href={link}
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
-                  <Link
-                    href={link}
-                    target="_blank"
-                    className="text-teal-500 border-b-2 px-1 border-zinc-900 hover:border-teal-500 transition-colors duration-300"
-                  >
-                    Visit Project &rarr;
-                  </Link>
                 </div>
                 <p className="text-zinc-400">{desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
 
           <p className="text-zinc-300">and many more to come...</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-[80%] items-center justify-center">
+        <div className="flex flex-col gap-2 w-[80%] max-sm:w-[90%] items-center justify-center">
           <h3 className="font-headings text-2xl lg:text-3xl text-zinc-100 px-2">
             Projects for Clients
           </h3>
           <p className="sm:text-lg text-justify text-zinc-300">
             These are the projects I made for myself mainly for the purpose of
-            learning.
+            learning. (Click to visit)
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {projectsForClients.map(({ title, desc, link }) => (
-              <div
+              <Link
+                href={link}
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
-                  <Link
-                    href={link}
-                    target="_blank"
-                    className="text-teal-500 border-b-2 px-1 border-zinc-900 hover:border-teal-500 transition-colors duration-300"
-                  >
-                    Visit Project &rarr;
-                  </Link>
                 </div>
                 <p className="text-zinc-400">{desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
           <p className="text-zinc-300">and many more to come...</p>

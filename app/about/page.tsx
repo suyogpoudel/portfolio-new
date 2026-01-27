@@ -74,7 +74,7 @@ const About = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center py-10">
+    <div className="flex flex-col justify-center items-center py-10 sm:py-15 lg:py-20">
       <div className="flex flex-col justify-center items-center">
         <Image
           src={Picture}
@@ -96,7 +96,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="flex flex-col justify-start w-[80%] mt-10">
+        <div className="flex flex-col justify-start w-[80%] max-sm:w-[90%] mt-10">
           <h3 className="font-headings text-xl lg:text-2xl text-zinc-100 px-2">
             Profile
           </h3>
@@ -110,7 +110,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col justify-start w-[80%] mt-10">
+        <div className="flex flex-col justify-start w-[80%] max-sm:w-[90%] mt-10">
           <h3 className="font-headings text-xl lg:text-2xl text-zinc-100 px-2">
             Skills
           </h3>
