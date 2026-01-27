@@ -84,7 +84,7 @@ const Projects = () => {
               <Link
                 href={link}
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 active:shadow-sm"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
@@ -111,7 +111,7 @@ const Projects = () => {
               <Link
                 href={link}
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 active:shadow-sm"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
