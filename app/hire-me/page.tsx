@@ -32,6 +32,7 @@ const HireMe = () => {
         <div className="flex items-center gap-2">
           <Link
             href="mailto:suyogpoudel583@gmail.com"
+            target="_blank"
             className="hover:border-b transition-all duration-150"
           >
             suyogpoudel583@gmail.com

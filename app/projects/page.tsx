@@ -80,16 +80,9 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {personalProjects.map(({ title, desc, link }) => (
-              <motion.div
+              <div
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl"
-                whileHover={{
-                  scale: 1.01,
-                  transition: {
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
@@ -102,7 +95,7 @@ const Projects = () => {
                   </Link>
                 </div>
                 <p className="text-zinc-400">{desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -120,16 +113,9 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mb-3">
             {projectsForClients.map(({ title, desc, link }) => (
-              <motion.div
+              <div
                 key={title}
-                className="bg-zinc-900 w-full px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl"
-                whileHover={{
-                  scale: 1.01,
-                  transition: {
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
@@ -142,7 +128,7 @@ const Projects = () => {
                   </Link>
                 </div>
                 <p className="text-zinc-400">{desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
           <p className="text-zinc-300">and many more to come...</p>

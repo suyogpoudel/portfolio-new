@@ -1,19 +1,15 @@
 import { Metadata } from "next";
 import Picture from "@/public/face.jpg";
 import Image from "next/image";
-import * as motion from "motion/react-client";
 import {
   IconBrandCss3,
-  IconBrandFacebook,
   IconBrandGithub,
   IconBrandHtml5,
-  IconBrandInstagram,
   IconBrandJavascript,
   IconBrandLinkedin,
   IconBrandNextjs,
   IconBrandReact,
   IconBrandTailwind,
-  IconBrandX,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -125,23 +121,16 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {skills.map(({ title, desc, icon: Icon }) => (
-              <motion.div
+              <div
                 key={title}
-                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl"
-                whileHover={{
-                  scale: 1.01,
-                  transition: {
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
+                className="bg-zinc-900 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex justify-between mb-2 ">
                   <p className="font-headings text-xl">{title}</p>
                   <Icon className="text-teal-500 scale-110" />
                 </div>
                 <p className="text-zinc-400">{desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

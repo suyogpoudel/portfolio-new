@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center py-10 sm:py-15 lg:py-20">
       <div className="flex flex-col justify-start gap-1 mb-4">
         <p className="px-4 text-zinc-300">Hi, I am</p>
 
         <motion.h1
-          className="font-display font-semibold lg:text-6xl text-5xl"
+          className="font-display font-semibold lg:text-6xl text-5xl text-center"
           initial={{
             color: "#4dabf7",
           }}
@@ -39,12 +39,14 @@ const Home = () => {
         </motion.h1>
       </div>
 
-      <h3 className="text-lg text-zinc-300 font-headings mb-5">
+      <h3 className="text-lg text-zinc-300 font-headings mb-5 text-center">
         A guy with a laptop, building websites that actually work (and look
         decent too).
       </h3>
 
       <CTAButton />
+
+      <p className="text-zinc-500 mt-5">Feel free to explore my work</p>
     </div>
   );
 };
